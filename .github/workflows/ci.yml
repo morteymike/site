@@ -17,6 +17,7 @@ jobs:
         include:
           - dockerfile: ./Dockerfile
             context: .
+            image: mortymike/site
 
     permissions:
       contents: read
