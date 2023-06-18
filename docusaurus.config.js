@@ -6,20 +6,20 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Mike Morton, Co-founder of socra Inc.',
+  tagline: `A collection of thoughts and ideas from Mike Morton, Co-founder of socra Inc.`,
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://socra.com',
+  url: 'https://mortymike.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'mortymike', // Usually your GitHub org/user name.
+  projectName: 'Mike Morton', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -64,11 +64,11 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Mike',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
-        },
+            alt: 'socra Logo',
+            src: 'socra_logo/android-chrome-192x192.png',
+          },
         items: [
           {
             type: 'docSidebar',
@@ -77,11 +77,11 @@ const config = {
             label: 'Tutorial',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+        //   {
+        //     href: 'https://github.com/facebook/docusaurus',
+        //     label: 'GitHub',
+        //     position: 'right',
+        //   },
         ],
       },
       footer: {
@@ -99,35 +99,31 @@ const config = {
           {
             title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                {
+                    label: 'Github',
+                    href: 'https://github.com/mortymike',
+                  },
+                  {
+                    label: 'Twitter',
+                    href: 'https://twitter.com/morteymike',
+                  },
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'socra',
+                to: 'https://socra.com',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/mortymike/site',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mike Morton.`,
       },
       prism: {
         theme: lightCodeTheme,
