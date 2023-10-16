@@ -4,5 +4,5 @@ This site is **absolutely** not a portfolio site. You can see [socra](https://so
 
 I'm an ex-athlete electrical engineer turned developer, turned founder of socra Inc.
 
-Want to know more? This site is hosted at https://mortymike.com
+Want to know more? This site is hosted at https://morteymike.com
 

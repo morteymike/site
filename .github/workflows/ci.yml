@@ -23,6 +23,9 @@ jobs:
       contents: read
       packages: write
 
+    env:
+      CONTAINER_TAG_ID: ${{ github.sha }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -47,7 +50,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ matrix.image }}
           # Tags with :latest only. e.g. ghcr.io/socra/socra-backend:latest
-          tags: "type=raw,value=latest"
+          tags: "type=raw,value=${{ env.CONTAINER_TAG_ID }}"
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
@@ -57,3 +60,24 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+  dispatch:
+    # Don't dispatch if event is a release
+    needs: [build-and-release]
+    name: morteymike dispatch to socra/infra
+    runs-on: ubuntu-latest
+    env:
+      CONTAINER_TAG_ID: ${{ github.sha }}
+      EVENT_TYPE: new-images-morteymike
+    strategy:
+      matrix:
+        repo: ["socra/infra"] # Can be more than one repo here
+    timeout-minutes: 5
+    steps:
+      - name: Dispatch morteymike
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.REPO_SCOPED_ACCESS_TOKEN }}
+          repository: socra/infra
+          event-type: new-images-morteymike
+          client-payload: '{"ref": "${{ github.ref }}", "event_type": "${{ env.EVENT_TYPE }}", "sha": "${{ github.sha }}", "containerId": "${{ env.CONTAINER_TAG_ID }}"}'
