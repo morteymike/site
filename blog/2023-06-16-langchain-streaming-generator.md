@@ -118,7 +118,6 @@ if __name__ == "__main__":
     for next_token, content in stream("How cool are LLMs?"):
         print(next_token)
         print(content)
-
 ```
 
 And that's it! We now have a generator we can use to stream OpenAI completions via LangChain. This method also works for chains, agents, etc.
