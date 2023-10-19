@@ -14,7 +14,7 @@ tags: [typescript, monorepo, turborepo, next, nextjs, next.js, modules, module-r
 When working with a monorepo that uses TypeScript, it's common to have a complex directory structure with many different packages and applications. In order to keep your code organized and easy to navigate, it can be helpful to set up import aliases for your internal packages.
 
 In this guide, we'll walk through the steps for setting up import aliases in a monorepo that uses TypeScript, Turborepo, and Next.js.
-
+<!--truncate-->
 ## Step 1: Update the `baseUrl` in `tsconfig.json`
 
 The first step is to update the `baseUrl` in the `tsconfig.json` file located in `apps/my-app` to reference the project root. This will ensure that the compiler knows where to look for your internal packages.

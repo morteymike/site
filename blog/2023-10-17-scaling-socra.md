@@ -4,7 +4,7 @@ This post focuses on some of the infrastructure powering [socra AI](https://socr
 For most modern web apps looking to scale, manually deploying files to an nginx or Apache web server is not sufficient. Just because you can find many tutorials on how to do this online, doesn't mean it's the best, newest, or most efficient way to do it.
 
 This is a common issue when learning to become a developer - you don't know the latest, greatest tools, so you may not know what to search for.
-
+<!--truncate-->
 ## The Basics
 Let's assume your web app requires a database, backend, frontend, an asynchronous task queue for your backend, caching, and a method to route traffic to your services. This is a pretty standard requirement for most web apps.
 

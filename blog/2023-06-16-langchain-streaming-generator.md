@@ -5,6 +5,8 @@ For most chat applications, we want to stream each token back to the client. Lan
 
 However, developers migrating from OpenAI's python library may find difficulty in implementing a Python generator along the same lines of the OpenAI library approach.
 
+<!--truncate-->
+
 ### OpenAI Streaming Example
 Here's an example of the OpenAI library streaming generator, from the [OpenAI Cookbook](https://github.com/openai/openai-cookbook/blob/main/examples/How_to_stream_completions.ipynb)
 ```py
